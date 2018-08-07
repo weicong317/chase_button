@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<title>Prank!!!</title>
+		<style>
+			body {
+				max-width: 1280px;
+				max-height: 550px;
+			}
+			#runButton {
+					width: auto;
+					height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Click The Button If You Can!!!</h1>
+		<hr>
+		<a href="https://www.google.com">
+			<!-- initial a function when mouve is overed the button -->
+			<button id = "runButton" onmouseover = chase()>Come Chase ME!</button></a>
+		<script>
+			// get the button in js
+			let button = document.getElementById("runButton");
+			let hoverCount = 1;
+			// initial a function named chase
+			function chase() {
+				// if the count is less than 11, the function will run
+				if (hoverCount <= 10) {
+					const top = (Math.random() * 500).toString() + "px";
+					const left = (Math.random() * 1230).toString() + "px";
+					button.style.position = "relative";
+					button.style.top = top;
+					button.style.left = left;
+					hoverCount += 1;
+				}
+			}
+		</script>
+	</body>
+</html>
